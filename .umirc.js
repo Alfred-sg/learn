@@ -2,7 +2,7 @@ export default {
   outputPath: 'docs',
   mode: 'site',
   base: '/learn',
-  history: { type: 'hash' },
+  // history: { type: 'hash' },
   extraBabelPlugins: [
     [
       'import',
