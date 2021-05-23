@@ -1,0 +1,52 @@
+{
+  "menus": {
+    "en-US": {
+      "*": [
+        {
+          "path": "/",
+          "title": "learn",
+          "meta": {
+            "order": 1
+          }
+        }
+      ],
+      "/h5": [
+        {
+          "path": "/h5/media",
+          "title": "video & audio",
+          "meta": {
+            "order": 1
+          }
+        },
+        {
+          "path": "/h5/storage",
+          "title": "storage & IndexedDB",
+          "meta": {
+            "order": 2
+          }
+        }
+      ]
+    }
+  },
+  "locales": [
+    {
+      "name": "en-US",
+      "label": "English"
+    }
+  ],
+  "navs": {
+    "en-US": [
+      {
+        "path": "/h5",
+        "title": "H5"
+      }
+    ]
+  },
+  "title": "learn-html5",
+  "mode": "site",
+  "repository": {
+    "url": "https://github.com/Alfred-sg/learn-html5",
+    "branch": "master"
+  },
+  "theme": {}
+}
