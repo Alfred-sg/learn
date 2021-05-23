@@ -12,3 +12,4 @@ hero:
 ## ✨ Features
 
 * video、audio：视频音频播放
+* storage、IndexedDB：本地存储
