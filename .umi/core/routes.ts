@@ -53,11 +53,11 @@ export function getRoutes() {
     "routes": [
       {
         "path": "/",
-        "component": require('/Users/alfred/Desktop/dvp/react-demos-use-dumi/docs/index.md').default,
+        "component": require('/Users/alfred/Desktop/dvp/react-demos-use-dumi/mds/index.md').default,
         "exact": true,
         "meta": {
-          "filePath": "docs/index.md",
-          "updatedTime": 1621749254406,
+          "filePath": "mds/index.md",
+          "updatedTime": 1621770306000,
           "title": "learn",
           "order": 1,
           "hero": {
@@ -66,7 +66,7 @@ export function getRoutes() {
             "actions": [
               {
                 "text": "指南",
-                "link": "/h5/medio"
+                "link": "/html/medio"
               }
             ]
           },
@@ -75,17 +75,93 @@ export function getRoutes() {
               "depth": 2,
               "value": "✨ Features",
               "heading": "-features"
+            },
+            {
+              "depth": 3,
+              "value": "html",
+              "heading": "html"
+            },
+            {
+              "depth": 3,
+              "value": "dom",
+              "heading": "dom"
             }
           ]
         },
         "title": "learn"
       },
       {
-        "path": "/h5/media",
-        "component": require('/Users/alfred/Desktop/dvp/react-demos-use-dumi/docs/h5/media.md').default,
+        "path": "/dom/rect",
+        "component": require('/Users/alfred/Desktop/dvp/react-demos-use-dumi/mds/dom/rect.md').default,
         "exact": true,
         "meta": {
-          "filePath": "docs/h5/media.md",
+          "filePath": "mds/dom/rect.md",
+          "updatedTime": 1621779615655,
+          "title": "rect",
+          "order": 1,
+          "slugs": [
+            {
+              "depth": 2,
+              "value": "getBoundingClientRect",
+              "heading": "getboundingclientrect"
+            },
+            {
+              "depth": 2,
+              "value": "clientWidth、offsetWidth、scrollWidth",
+              "heading": "clientwidth、offsetwidth、scrollwidth"
+            },
+            {
+              "depth": 2,
+              "value": "getComputedStyle",
+              "heading": "getcomputedstyle"
+            },
+            {
+              "depth": 2,
+              "value": "屏幕宽高、滚动偏移量等",
+              "heading": "屏幕宽高、滚动偏移量等"
+            },
+            {
+              "depth": 2,
+              "value": "dom-align",
+              "heading": "dom-align"
+            }
+          ],
+          "nav": {
+            "path": "/dom",
+            "title": "Dom"
+          }
+        },
+        "title": "rect"
+      },
+      {
+        "path": "/dom/scrollbars",
+        "component": require('/Users/alfred/Desktop/dvp/react-demos-use-dumi/mds/dom/scrollbars.md').default,
+        "exact": true,
+        "meta": {
+          "filePath": "mds/dom/scrollbars.md",
+          "updatedTime": 1621779263065,
+          "title": "scrollbars",
+          "order": 2,
+          "slugs": [
+            {
+              "depth": 2,
+              "value": "react-custom-scrollbars",
+              "heading": "react-custom-scrollbars"
+            }
+          ],
+          "nav": {
+            "path": "/dom",
+            "title": "Dom"
+          }
+        },
+        "title": "scrollbars"
+      },
+      {
+        "path": "/html/media",
+        "component": require('/Users/alfred/Desktop/dvp/react-demos-use-dumi/mds/html/media.md').default,
+        "exact": true,
+        "meta": {
+          "filePath": "mds/html/media.md",
           "updatedTime": 1621750256113,
           "title": "video & audio",
           "order": 1,
@@ -137,18 +213,18 @@ export function getRoutes() {
             }
           ],
           "nav": {
-            "path": "/h5",
-            "title": "H5"
+            "path": "/html",
+            "title": "Html"
           }
         },
         "title": "video & audio"
       },
       {
-        "path": "/h5/storage",
-        "component": require('/Users/alfred/Desktop/dvp/react-demos-use-dumi/docs/h5/storage.md').default,
+        "path": "/html/storage",
+        "component": require('/Users/alfred/Desktop/dvp/react-demos-use-dumi/mds/html/storage.md').default,
         "exact": true,
         "meta": {
-          "filePath": "docs/h5/storage.md",
+          "filePath": "mds/html/storage.md",
           "updatedTime": 1621766802321,
           "title": "storage & IndexedDB",
           "order": 2,
@@ -165,17 +241,23 @@ export function getRoutes() {
             }
           ],
           "nav": {
-            "path": "/h5",
-            "title": "H5"
+            "path": "/html",
+            "title": "Html"
           }
         },
         "title": "storage & IndexedDB"
       },
       {
-        "path": "/h5",
+        "path": "/dom",
         "meta": {},
         "exact": true,
-        "redirect": "/h5/media"
+        "redirect": "/dom/rect"
+      },
+      {
+        "path": "/html",
+        "meta": {},
+        "exact": true,
+        "redirect": "/html/media"
       }
     ],
     "title": "learn-html5",

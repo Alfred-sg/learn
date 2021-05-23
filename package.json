@@ -21,6 +21,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "react-custom-scrollbars": "^4.2.1",
     "video-react": "^0.14.1"
   }
 }

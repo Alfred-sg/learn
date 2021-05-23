@@ -10,16 +10,32 @@
           }
         }
       ],
-      "/h5": [
+      "/dom": [
         {
-          "path": "/h5/media",
+          "path": "/dom/rect",
+          "title": "rect",
+          "meta": {
+            "order": 1
+          }
+        },
+        {
+          "path": "/dom/scrollbars",
+          "title": "scrollbars",
+          "meta": {
+            "order": 2
+          }
+        }
+      ],
+      "/html": [
+        {
+          "path": "/html/media",
           "title": "video & audio",
           "meta": {
             "order": 1
           }
         },
         {
-          "path": "/h5/storage",
+          "path": "/html/storage",
           "title": "storage & IndexedDB",
           "meta": {
             "order": 2
@@ -37,8 +53,12 @@
   "navs": {
     "en-US": [
       {
-        "path": "/h5",
-        "title": "H5"
+        "path": "/dom",
+        "title": "Dom"
+      },
+      {
+        "path": "/html",
+        "title": "Html"
       }
     ]
   },

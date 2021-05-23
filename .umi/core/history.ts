@@ -2,7 +2,7 @@
 import { createHashHistory, History } from '/Users/alfred/Desktop/dvp/react-demos-use-dumi/node_modules/_@umijs_runtime@3.4.22@@umijs/runtime';
 
 let options = {
-  "basename": "/learn"
+  "basename": "/"
 };
 if ((<any>window).routerBase) {
   options.basename = (<any>window).routerBase;
