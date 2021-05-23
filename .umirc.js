@@ -1,5 +1,5 @@
 export default {
-  outputPath: 'site',
+  outputPath: 'docs',
   mode: 'site',
   base: '/learn',
   history: { type: 'hash' },
@@ -14,6 +14,6 @@ export default {
     ]
   ],
   resolve: {
-    includes: ['docs'],
+    includes: ['mds'],
   }
 };
