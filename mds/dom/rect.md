@@ -7,6 +7,8 @@ order: 1
 
 [Element.getBoundingClientRect](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) 用于获取元素尺寸及其相对视口的位置，返回对象包含 width、height、top、left、right、bottom 属性。以下是百度搜索按钮的返回值：
 
+<img src="./assets/getBoundingClientRect.png" />
+
 如果元素的盒模式设置为 border-box，width、height 属性会包含 content、padding、border；设置为 content-box，那就仅包含 content。
 
 top、left 等属性是相对窗口（viewport）的距离。[getBoundingClientRect 详解](https://www.cnblogs.com/leejersey/p/4127714.html)总结到，ie 浏览器窗口本身有 2 像素的边框，需要减去。

@@ -19,8 +19,8 @@
           }
         },
         {
-          "path": "/dom/scrollbars",
-          "title": "scrollbars",
+          "path": "/dom/full-screen",
+          "title": "fullscreen api",
           "meta": {
             "order": 2
           }
@@ -41,6 +41,20 @@
             "order": 2
           }
         }
+      ],
+      "/react": [
+        {
+          "path": "/react/scrollbars",
+          "title": "scrollbars",
+          "meta": {
+            "order": 2
+          }
+        },
+        {
+          "path": "/react/slider",
+          "title": "Slider",
+          "meta": {}
+        }
       ]
     }
   },
@@ -59,6 +73,10 @@
       {
         "path": "/html",
         "title": "Html"
+      },
+      {
+        "path": "/react",
+        "title": "React"
       }
     ]
   },

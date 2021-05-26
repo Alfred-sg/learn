@@ -57,7 +57,7 @@ export function getRoutes() {
         "exact": true,
         "meta": {
           "filePath": "mds/index.md",
-          "updatedTime": 1621770306000,
+          "updatedTime": 1621779751000,
           "title": "learn",
           "order": 1,
           "hero": {
@@ -91,12 +91,45 @@ export function getRoutes() {
         "title": "learn"
       },
       {
+        "path": "/dom/full-screen",
+        "component": require('/Users/alfred/Desktop/dvp/react-demos-use-dumi/mds/dom/full-screen.md').default,
+        "exact": true,
+        "meta": {
+          "filePath": "mds/dom/full-screen.md",
+          "updatedTime": 1622044459200,
+          "title": "fullscreen api",
+          "order": 2,
+          "slugs": [
+            {
+              "depth": 2,
+              "value": "方法或属性",
+              "heading": "方法或属性"
+            },
+            {
+              "depth": 2,
+              "value": "事件",
+              "heading": "事件"
+            },
+            {
+              "depth": 2,
+              "value": "示例",
+              "heading": "示例"
+            }
+          ],
+          "nav": {
+            "path": "/dom",
+            "title": "Dom"
+          }
+        },
+        "title": "fullscreen api"
+      },
+      {
         "path": "/dom/rect",
         "component": require('/Users/alfred/Desktop/dvp/react-demos-use-dumi/mds/dom/rect.md').default,
         "exact": true,
         "meta": {
           "filePath": "mds/dom/rect.md",
-          "updatedTime": 1621779615655,
+          "updatedTime": 1621779751000,
           "title": "rect",
           "order": 1,
           "slugs": [
@@ -134,35 +167,12 @@ export function getRoutes() {
         "title": "rect"
       },
       {
-        "path": "/dom/scrollbars",
-        "component": require('/Users/alfred/Desktop/dvp/react-demos-use-dumi/mds/dom/scrollbars.md').default,
-        "exact": true,
-        "meta": {
-          "filePath": "mds/dom/scrollbars.md",
-          "updatedTime": 1621779263065,
-          "title": "scrollbars",
-          "order": 2,
-          "slugs": [
-            {
-              "depth": 2,
-              "value": "react-custom-scrollbars",
-              "heading": "react-custom-scrollbars"
-            }
-          ],
-          "nav": {
-            "path": "/dom",
-            "title": "Dom"
-          }
-        },
-        "title": "scrollbars"
-      },
-      {
         "path": "/html/media",
         "component": require('/Users/alfred/Desktop/dvp/react-demos-use-dumi/mds/html/media.md').default,
         "exact": true,
         "meta": {
           "filePath": "mds/html/media.md",
-          "updatedTime": 1621750256113,
+          "updatedTime": 1621779751000,
           "title": "video & audio",
           "order": 1,
           "slugs": [
@@ -225,7 +235,7 @@ export function getRoutes() {
         "exact": true,
         "meta": {
           "filePath": "mds/html/storage.md",
-          "updatedTime": 1621766802321,
+          "updatedTime": 1621779751000,
           "title": "storage & IndexedDB",
           "order": 2,
           "slugs": [
@@ -248,6 +258,45 @@ export function getRoutes() {
         "title": "storage & IndexedDB"
       },
       {
+        "path": "/react/scrollbars",
+        "component": require('/Users/alfred/Desktop/dvp/react-demos-use-dumi/mds/react/scrollbars.md').default,
+        "exact": true,
+        "meta": {
+          "filePath": "mds/react/scrollbars.md",
+          "updatedTime": 1621786301320,
+          "title": "scrollbars",
+          "order": 2,
+          "slugs": [
+            {
+              "depth": 2,
+              "value": "react-custom-scrollbars",
+              "heading": "react-custom-scrollbars"
+            }
+          ],
+          "nav": {
+            "path": "/react",
+            "title": "React"
+          }
+        },
+        "title": "scrollbars"
+      },
+      {
+        "path": "/react/slider",
+        "component": require('/Users/alfred/Desktop/dvp/react-demos-use-dumi/mds/react/slider.md').default,
+        "exact": true,
+        "meta": {
+          "filePath": "mds/react/slider.md",
+          "updatedTime": 1621786292813,
+          "slugs": [],
+          "title": "Slider",
+          "nav": {
+            "path": "/react",
+            "title": "React"
+          }
+        },
+        "title": "Slider"
+      },
+      {
         "path": "/dom",
         "meta": {},
         "exact": true,
@@ -258,6 +307,12 @@ export function getRoutes() {
         "meta": {},
         "exact": true,
         "redirect": "/html/media"
+      },
+      {
+        "path": "/react",
+        "meta": {},
+        "exact": true,
+        "redirect": "/react/scrollbars"
       }
     ],
     "title": "learn-html5",

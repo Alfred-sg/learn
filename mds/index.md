@@ -19,4 +19,8 @@ hero:
 ### dom
 
 * rect：元素尺寸以及滚动偏移量
+* fullscreen api：全屏模式
+
+### react
+
 * scrollbars：滚动条
