@@ -57,7 +57,7 @@ export function getRoutes() {
         "exact": true,
         "meta": {
           "filePath": "mds/index.md",
-          "updatedTime": 1621779751000,
+          "updatedTime": 1622044540000,
           "title": "learn",
           "order": 1,
           "hero": {
@@ -85,6 +85,11 @@ export function getRoutes() {
               "depth": 3,
               "value": "dom",
               "heading": "dom"
+            },
+            {
+              "depth": 3,
+              "value": "react",
+              "heading": "react"
             }
           ]
         },
@@ -96,7 +101,7 @@ export function getRoutes() {
         "exact": true,
         "meta": {
           "filePath": "mds/dom/full-screen.md",
-          "updatedTime": 1622044459200,
+          "updatedTime": 1622044540000,
           "title": "fullscreen api",
           "order": 2,
           "slugs": [
@@ -129,7 +134,7 @@ export function getRoutes() {
         "exact": true,
         "meta": {
           "filePath": "mds/dom/rect.md",
-          "updatedTime": 1621779751000,
+          "updatedTime": 1622044540000,
           "title": "rect",
           "order": 1,
           "slugs": [
@@ -263,7 +268,7 @@ export function getRoutes() {
         "exact": true,
         "meta": {
           "filePath": "mds/react/scrollbars.md",
-          "updatedTime": 1621786301320,
+          "updatedTime": 1622044540000,
           "title": "scrollbars",
           "order": 2,
           "slugs": [
@@ -286,7 +291,7 @@ export function getRoutes() {
         "exact": true,
         "meta": {
           "filePath": "mds/react/slider.md",
-          "updatedTime": 1621786292813,
+          "updatedTime": 1622044540000,
           "slugs": [],
           "title": "Slider",
           "nav": {
@@ -295,6 +300,39 @@ export function getRoutes() {
           }
         },
         "title": "Slider"
+      },
+      {
+        "path": "/typescript/advanced-usage",
+        "component": require('/Users/alfred/Desktop/dvp/react-demos-use-dumi/mds/typescript/advanced-usage.md').default,
+        "exact": true,
+        "meta": {
+          "filePath": "mds/typescript/advanced-usage.md",
+          "updatedTime": 1624290430524,
+          "title": "高级技巧",
+          "order": 1,
+          "slugs": [
+            {
+              "depth": 2,
+              "value": "keyof",
+              "heading": "keyof"
+            },
+            {
+              "depth": 2,
+              "value": "Partial, Required, Readonly, Pick",
+              "heading": "partial-required-readonly-pick"
+            },
+            {
+              "depth": 2,
+              "value": "? :",
+              "heading": "-"
+            }
+          ],
+          "nav": {
+            "path": "/typescript",
+            "title": "Typescript"
+          }
+        },
+        "title": "高级技巧"
       },
       {
         "path": "/dom",
@@ -313,6 +351,12 @@ export function getRoutes() {
         "meta": {},
         "exact": true,
         "redirect": "/react/scrollbars"
+      },
+      {
+        "path": "/typescript",
+        "meta": {},
+        "exact": true,
+        "redirect": "/typescript/advanced-usage"
       }
     ],
     "title": "learn-html5",

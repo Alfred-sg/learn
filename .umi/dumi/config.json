@@ -55,6 +55,15 @@
           "title": "Slider",
           "meta": {}
         }
+      ],
+      "/typescript": [
+        {
+          "path": "/typescript/advanced-usage",
+          "title": "高级技巧",
+          "meta": {
+            "order": 1
+          }
+        }
       ]
     }
   },
@@ -77,6 +86,10 @@
       {
         "path": "/react",
         "title": "React"
+      },
+      {
+        "path": "/typescript",
+        "title": "Typescript"
       }
     ]
   },
