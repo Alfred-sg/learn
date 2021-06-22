@@ -58,10 +58,17 @@
       ],
       "/typescript": [
         {
+          "path": "/typescript/functions",
+          "title": "函数",
+          "meta": {
+            "order": 1
+          }
+        },
+        {
           "path": "/typescript/advanced-usage",
           "title": "高级技巧",
           "meta": {
-            "order": 1
+            "order": 2
           }
         }
       ]

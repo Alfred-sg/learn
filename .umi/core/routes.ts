@@ -307,14 +307,14 @@ export function getRoutes() {
         "exact": true,
         "meta": {
           "filePath": "mds/typescript/advanced-usage.md",
-          "updatedTime": 1624290430524,
+          "updatedTime": 1624290842000,
           "title": "高级技巧",
-          "order": 1,
+          "order": 2,
           "slugs": [
             {
               "depth": 2,
-              "value": "keyof",
-              "heading": "keyof"
+              "value": "Keyof Type Operator",
+              "heading": "keyof-type-operator"
             },
             {
               "depth": 2,
@@ -323,8 +323,8 @@ export function getRoutes() {
             },
             {
               "depth": 2,
-              "value": "? :",
-              "heading": "-"
+              "value": "Conditional Types",
+              "heading": "conditional-types"
             }
           ],
           "nav": {
@@ -333,6 +333,59 @@ export function getRoutes() {
           }
         },
         "title": "高级技巧"
+      },
+      {
+        "path": "/typescript/functions",
+        "component": require('/Users/alfred/Desktop/dvp/react-demos-use-dumi/mds/typescript/functions.md').default,
+        "exact": true,
+        "meta": {
+          "filePath": "mds/typescript/functions.md",
+          "updatedTime": 1624376015116,
+          "title": "函数",
+          "order": 1,
+          "slugs": [
+            {
+              "depth": 2,
+              "value": "函数类型表达式",
+              "heading": "函数类型表达式"
+            },
+            {
+              "depth": 2,
+              "value": "调用签名",
+              "heading": "调用签名"
+            },
+            {
+              "depth": 2,
+              "value": "构造函数签名",
+              "heading": "构造函数签名"
+            },
+            {
+              "depth": 2,
+              "value": "泛型函数",
+              "heading": "泛型函数"
+            },
+            {
+              "depth": 3,
+              "value": "类型推断",
+              "heading": "类型推断"
+            },
+            {
+              "depth": 3,
+              "value": "限制",
+              "heading": "限制"
+            },
+            {
+              "depth": 3,
+              "value": "泛型注意事项",
+              "heading": "泛型注意事项"
+            }
+          ],
+          "nav": {
+            "path": "/typescript",
+            "title": "Typescript"
+          }
+        },
+        "title": "函数"
       },
       {
         "path": "/dom",
@@ -356,7 +409,7 @@ export function getRoutes() {
         "path": "/typescript",
         "meta": {},
         "exact": true,
-        "redirect": "/typescript/advanced-usage"
+        "redirect": "/typescript/functions"
       }
     ],
     "title": "learn-html5",

@@ -1,11 +1,11 @@
 ---
 title: 高级技巧
-order: 1
+order: 2
 ---
 
-## keyof
+## Keyof Type Operator
 
-有时候我们需要获取 interface 或 type 的属性列表，以作为可选的数据类型，keyof 就派上用场了。看下面一个示例：
+有时候我们需要获取 interface 或 type 的属性列表，以作为可选的数据类型，keyof 就派上用场了。官方文档可以戳 [这里](https://www.typescriptlang.org/docs/handbook/2/keyof-types.html)。看下面一个示例：
 
 ```ts
 interface User {
@@ -130,17 +130,26 @@ type ReadonlyUser = Readonly<User>;
 type PickUser = Pick<User, "name">;
 ```
 
-## ? :
+## Conditional Types
 
-ts 类型中的条件运算符 ? : 可用于扩展一些基本类型。
+ts 类型中的条件运算符 ? : 可用于扩展一些基本类型。其作用在于根据输入动态设置类型，基本格式为 SomeType extends OtherType ? TrueType : FalseType;
 
 ```ts
-// 当泛型 T 不是 true 时，类型为 true，否则为 false
-type isTrue<T> = T extends true ? true : false;
+interface IdLabel {
+  id: number /* some fields */;
+}
 
-// 相当于 type t = false
-type t = isTrue<number>;
+interface NameLabel {
+  name: string /* other fields */;
+}
 
-// 相当于 type t = false
-type t1 = isTrue<false>;
+// 当泛型 T 为 number 类型时，类型为 IdLabel
+// 当泛型 T 为 string 类型时，类型为 NameLabel
+type NameOrId<T extends number | string> = T extends number
+  ? IdLabel
+  : NameLabel;
+
+function createLabel<T extends number | string>(idOrName: T): NameOrId<T> {
+  throw "unimplemented";
+}
 ```
