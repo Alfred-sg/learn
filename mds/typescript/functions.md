@@ -147,3 +147,43 @@ function greet(s: string) {
   console.log("Hello, " + s);
 }
 ```
+
+## 函数重载注意事项
+
+1. 能使用联合类型，就不要使用重载
+
+## this 关键字
+
+ts 通过分析代码可以获知函数体中是否使用了 this。我们也可以通过首参指定函数体内 this 的类型，如下：
+
+```ts
+const user = {
+  id: 123,
+
+  admin: false,
+  becomeAdmin: function() {
+    this.admin = true;
+  }
+};
+
+interface DB {
+  filterUsers(filter: (this: User) => boolean): User[];
+}
+
+const db = getDB();
+// 回调函数不能是箭头函数，且 this 必须作为首参
+const admins = db.filterUsers(function(this: User) {
+  return this.admin;
+});
+```
+
+## 其他
+
+1. 可选参数使用 ? 标注可选参数
+2. void 表示没有返回值，与 undefined 有所差异
+3. object 表示 string, number, boolean, symbol, null, undefined 除外的类型，函数也是一个 object，且与 { } 有所差异。不要使用 Object
+4. unknown 表示任意类型。不同于 any，对 unknown 属性或方法的操作会报错
+5. never 表示会报错
+6. Function 包含 bind, call, apply 等属性，且可调用，不过它会返回 any。当你打算接受函数作为参数，且不打算调用它，可以将类型设为 () => void
+7. rest 参数可以使用 ...
+8. 参数解构
