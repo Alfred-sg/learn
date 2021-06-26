@@ -16,6 +16,11 @@ typescript 不只能执行静态类型检查，它还能在编辑器提示可选
 5. any：any 表示任意类型，可访问该值的属性或调用该值的方法。通常不推荐使用，因为它会骗过类型检查。注意，当没有为值指定类型时，Typescript 会自动将该值推断为 any 类型。编译选项 noImplicitAny 可以将 any 识别为 error
 6. Typescript 在值后使用 : 声明类型，而不使用类似 Java 中的 types on the left，比如 const a: string = 'hello world'。当不指定类型注解（type annotations）时，Typescript 会自动根据初始化语句推断类型
 7. 联合类型使用 | 分割
+8. typeof：string, number, bigint, boolean, symbol, undefined, object, function 等类型可以使用 typeof 检测
+9. in：in 操作符表示左值是否以属性或方法的形式存在于右值中
+10. instanceof：instanceof 操作符表示左值是否是右值的实例
+11. is：is 操作符可用于类型预测，即限定类型，左值必为右值类型。在类中可使用 this is Type 形式
+12. never：never 表示不存在
 
 ## type & interface
 
@@ -47,6 +52,29 @@ interface Window {
 
 interface Window {
   ts: TypeScriptAPI;
+}
+```
+
+结合 type, interface 使用联合类型，typescript 可以在条件分支中推断出具体的类型。如下：
+
+```ts
+interface Circle {
+  kind: "circle";
+  radius: number;
+}
+
+interface Square {
+  kind: "square";
+  sideLength: number;
+}
+
+type Shape = Circle | Square;
+
+function getArea(shape: Shape) {
+  if (shape.kind === "circle") {
+    // typescript 会推断出 Circle 类型
+    return Math.PI * shape.radius ** 2;
+  }
 }
 ```
 
