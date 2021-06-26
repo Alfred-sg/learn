@@ -1,6 +1,6 @@
 ---
 title: 基础
-order: 0
+order: 1
 ---
 
 typescript 提供了一种工具，它可以在编译前静态执行代码类型检查，这样就能使 javascript 运行时语义（runtime semantics）错误提前暴露出来，显著提升大型复杂应用的可维护性。
@@ -109,3 +109,33 @@ handleRequest(req.url, req.method as "GET");
 const req = { url: "https://example.com", method: "GET" } as const;
 handleRequest(req.url, req.method);
 ```
+
+字面量可以使用模板语句拼接，如 `${string & keyof Type}Changed`。
+
+```ts
+type PropEventSource<Type> = {
+    on<Key extends string & keyof Type>
+        (eventName: `${Key}Changed`, callback: (newValue: Type[Key]) => void ): void;
+};
+
+declare function makeWatchedObject<Type>(obj: Type): Type & PropEventSource<Type>;
+
+const person = makeWatchedObject({
+  firstName: "Saoirse",
+  lastName: "Ronan",
+  age: 26
+});
+
+person.on("firstNameChanged", newName => {
+
+(parameter) newName: string
+    console.log(`new name is ${newName.toUpperCase()}`);
+});
+```
+
+此外，typescript 提供了几个泛型操作可以作字面量的大小写转换。
+
+1. Uppercase<StringType>：字面量转大写
+2. Lowercase<StringType>：字面量转小写
+3. Capitalize<StringType>：首字母转大写
+4. Uncapitalize<StringType>：首字母转小写

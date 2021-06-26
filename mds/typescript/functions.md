@@ -1,6 +1,6 @@
 ---
 title: 函数
-order: 1
+order: 2
 ---
 
 本文档基于 [More on Functions](https://www.typescriptlang.org/docs/handbook/2/functions.html) 整理。

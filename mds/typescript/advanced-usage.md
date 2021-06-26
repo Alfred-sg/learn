@@ -1,6 +1,6 @@
 ---
 title: 高级技巧
-order: 2
+order: 20
 ---
 
 ## Keyof Type Operator
@@ -152,4 +152,37 @@ type NameOrId<T extends number | string> = T extends number
 function createLabel<T extends number | string>(idOrName: T): NameOrId<T> {
   throw "unimplemented";
 }
+```
+
+## 对象
+
+```ts
+// 索引签名
+type OnlyBoolsAndHorses = {
+  [key: string]: boolean | Horse;
+};
+
+type OptionsFlags<Type> = {
+  [Property in keyof Type]: boolean;
+};
+
+// 用 - 移除 readonly, ? 可选修饰
+type CreateMutable<Type> = {
+  -readonly [Property in keyof Type]: Type[Property];
+};
+
+// 将属性转化为新的属性
+type Getters<Type> = {
+  [Property in keyof Type as `get${Capitalize<string & Property>}`]: () => Type[Property]
+};
+
+// 移除属性
+type RemoveKindField<Type> = {
+  [Property in keyof Type as Exclude<Property, "kind">]: Type[Property]
+};
+
+// 重写
+type ExtractPII<Type> = {
+  [Property in keyof Type]: Type[Property] extends { pii: true } ? true : false;
+};
 ```
